@@ -1,0 +1,214 @@
+/* COMEÇO DA ESTRUTA PRINCIPAL DO SITE---------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+}
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background-image: url('../css/video_preview.webm');
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+/* FINAL DA ESTRUTA PRINCIPAL DO SITE---------------*/
+
+
+
+/* COMEÇO DO HEADER ---------------*/
+header{
+    box-shadow: 2px 2px  #FFCF1F;
+    width: 100%;
+    padding: 2vh;
+    /*position: fixed;*/
+    background-color: rgba(0, 0, 0, 0.842);
+}
+.bg_video{
+	position: fixed; 
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -1000;
+	background: url(../css/video_preview.webm) no-repeat;
+	background-size: cover; 
+}
+/*A IMAGEM PRECISA SER AQUI PRA TODOS AS PÁGINAS DO SITE PODEREM PUXAR DAQUI*/
+.titulo-img {
+    background-image: url("/assets/icon/One-Piece-Logo.png");
+    padding: 10px 35px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    
+}
+
+h1 a{
+    opacity: 0;
+    font-size: 40px; 
+   }
+
+.titulo-img img{
+    width: 150px;
+}
+
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegacao a {
+    color: #FFCF1F;
+    text-decoration: none;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.navegacao ul li {
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.navegacao ul li:hover{
+    text-shadow: 3px 3px 22px #FFCF1F;
+}
+
+/* FINAL DO HEADER---------------*/
+
+/* COMEÇO DO MAIN--------------- */ 
+main {
+    height: auto;
+    width: auto;
+    
+        
+}
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-size: cover;
+    color: white;    
+    margin-bottom: 130px;
+}
+
+
+
+.text-bem-vindo{
+    /* background-color: aqua; */
+    padding: 100px;
+    width: 60%;
+    font-size: 30px;
+    color:  #F2010B;
+    text-shadow: 3px 3px 22px #FFCF1F;
+}
+
+.main-text{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 100px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.video.op{
+    border: cornsilk;
+}
+
+.img-valores{
+    margin: 3vh;
+}
+
+.banner_valores{
+    position: relative;
+}
+
+.img_mapa{
+    
+    position: absolute;
+}
+
+.valores-text{
+    display: flex;
+    justify-content: space-evenly;
+    text-align:center;
+    color: rgb(220, 239, 255);
+    font-size: 25px;
+
+    
+}
+
+.valores-text{
+    display: flex;
+    justify-content: space-evenly;
+    text-align:center;
+    color: rgb(220, 239, 255);
+    font-size: 25px;
+}
+
+.sobre-text{
+    text-align: center;
+    padding: 0px 100px 0px 100px;
+    font-size: 18px;
+    
+}
+
+.text-SobreNos{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: 100px 0px 0px 0px;
+    color: rgb(220, 239, 255);
+    text-shadow: 3px 3px 22px #FFCF1F;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.main-text p{
+    text-align: center;
+}
+
+
+/* COMEÇO DO MAIN--------------- */ 
+
+
+
+/* FOOTER AQUI */
+footer {
+    display: flex;
+    padding: 5vh;
+    margin-top: auto;
+    width: 100%;
+    background-color: #FFCF1F;
+}
+
+footer .containerFooter {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: black;
+}
+
