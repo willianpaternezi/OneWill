@@ -3,6 +3,7 @@ process.env.AMBIENTE_PROCESSO = "desenvolvimento";
 
 var express = require("express"); 
 var cors = require("cors");
+var ejs = require("ejs")
 var path = require("path");
 var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3333 : 8080;
 
@@ -15,7 +16,8 @@ var avisosRouter = require("./src/routes/avisos");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
-
+app.engine('html', ejs.renderFile);
+app.set('view engine', 'html');
 app.use(cors());
 
 app.use("/", indexRouter);

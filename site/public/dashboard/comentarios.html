@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouWill | Dicas e Comentários</title>
+    <title>OneWill | Dicas, comentários e tudo sobre os Chapéu de Palha</title>
 
     <link rel="icon" href="../assets/icon/logo aus.png">
     <link rel="stylesheet" href="../css/style.css">
@@ -33,8 +32,8 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="cidades.html">
-                    <h3>Cidades</h3>
+                <a href="personagens.html">
+                    <h3>personagens</h3>
                 </a>
             </div>
 
@@ -53,6 +52,60 @@
             </div>
 
         </div>
+
+        <div class="dash">
+            <div>
+                <ul class="navbar_personagens">
+                    <li>
+                        <a class="agora" href="#sydney">Sydney</a>
+                    </li>
+                    <li>|</li>
+                    <li >
+                        <a class="agora" href="#brisbane">Brisbane</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a class="agora" href="#canberra">Canberra</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="sydney" class="sydney">
+                    <img src="../assets/imgs/bondi_cogee.jpeg">
+                    <img src="../assets/imgs/circular_quay.jpg">
+                    <img src="../assets/imgs/palm beach.jpg">
+                    <img src="../assets/imgs/taronga_zoo.jpg">
+            </div>
+            <div id="brisbane" class="brisbane">
+                    <img src="../assets/imgs/koala hospital 2.jpg">
+                    <img src="../assets/imgs/PelicanP-SM-WRC189-777x437.jpg">
+                    <img src="../assets/imgs/surfer paradise.jpg">
+                    <img src="../assets/imgs/lighthouse byron bay.jpg">
+            </div>
+            <div id="canberra" class="canberra">
+                    <img src="../assets/imgs/canberra.jpg">
+                    <img src="../assets/imgs/hyamas beach.jpg">
+                    <img src="../assets/imgs/nan-tien-temple-pilgrim.jpg">
+                    <img src="../assets/imgs/parlamento.jpg">
+            </div>
+        </div>
+
+        <div class="dash_votacao">
+            <div id="div_capital" class="grafico_capital">
+              Qual o seu personagem favorito dos Chapéu de Palha? <br />
+              <div class="btn_capital">
+                <button class="classe_btn" onclick="btn_capital()">Luffy</button>
+                <button class="classe_btn" onclick="btn_capital()">Zoro</button>
+                <button class="classe_btn" onclick="btn_capital()">Sanji</button>
+                <button class="classe_btn" onclick="btn_capital()">Usopp</button>
+                <button class="classe_btn" onclick="btn_capital()">Nami</button>
+                <button class="classe_btn" onclick="btn_capital()">Chopper</button>
+                <button class="classe_btn" onclick="btn_capital()">Robin</button>
+                <button class="classe_btn" onclick="btn_capital()">Franky</button>
+                <button class="classe_btn" onclick="btn_capital()">Brook</button>
+    
+            </div>
+              </div>
+            </div>
 
         <div class="dash-right">
 
@@ -92,6 +145,18 @@
 <script>
     
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var votacao_capital = localStorage.getItem('@voto_capital')
+  var votacao_rota = localStorage.getItem('@voto_rota')
+
+  if(votacao_capital === 'true'){
+    div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>" 
+  }
+
+  function btn_capital(){
+    div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>" 
+    localStorage.setItem('@voto_capital','true')
+    }
 
     function limparFormulario() {
         document.getElementById("form_postagem").reset();

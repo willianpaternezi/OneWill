@@ -101,10 +101,9 @@ body {
   display: flex;
   font-size: 15px;
   width: 100vw;
-  position: fixed;
   bottom: 0;
   border-top: 3px solid #3570B1;
-  ;
+  margin-top: auto;
 }
 
 .footer .container {
@@ -157,10 +156,7 @@ margin-top: -18px;
 .banner #div_erros_login {
   margin-top: 15px;
 }
-.footer{
-  display: flex;
-  bottom: 0;
-}
+
 
 button {
   cursor: pointer;
