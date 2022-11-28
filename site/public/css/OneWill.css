@@ -16,25 +16,33 @@ body {
 }
 
 /* COMEÇO DO HEADER ---------------*/
+.bg_video{
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -1000;
+    background: url(../css/video_preview.webm) no-repeat;
+    background-size: cover; 
+}
 header{
     box-shadow: 2px 2px  #FFCF1F;
     width: 100%;
     padding: 2vh;
     background-color: rgba(0, 0, 0, 0.842);
 }
-.bg_video{
-	position: fixed; 
-	right: 0; 
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	width: auto; 
-	height: auto; 
-	z-index: -1000;
-	background: url(../css/video_preview.webm) no-repeat;
-	background-size: cover; 
-}
 
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .titulo-img {
     background-image: url("/assets/icon/One-Piece-Logo.png");
     padding: 10px 35px;
@@ -52,14 +60,6 @@ h1 a{
     width: 150px;
 }
 
-.container {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .navegacao a {
     color: #FFCF1F;
@@ -95,7 +95,6 @@ main {
     background-size: cover;
     color: rgba(26, 13, 1, 0.968);    
     margin-bottom: 100px;
-    padding-left: 20px;
     padding-right: 700px;
     padding-top: 80px;
 }
@@ -106,7 +105,7 @@ main {
     color:  #F2010B;
     text-shadow: 3px 3px 22px #FFCF1F;
     padding-top: 0px;
-    padding-left: -30px;
+    padding-left: 80px;
 }
 
 .main-text{
@@ -181,23 +180,23 @@ main {
 }
 
 /* FOOTER INICIO */
+
 footer {
     display: flex;
-    padding: 10px;
-    margin-top: auto;
+    padding: 0px;
     width: 100%;
     background-color: #FFCF1F;
-}
-
-footer .containerFooter {
+  }
+  
+  footer .containerFooter {
     display: flex;
     width: 80%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-footer p {
+  }
+  
+  footer p {
     color: rgba(26, 13, 1, 0.968);
-}
+  }

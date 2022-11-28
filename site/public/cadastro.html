@@ -14,31 +14,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
   </head>
 
   <body>
-    <!--header inicio-->
-    <div class="header">
+    <header>
       <div class="container">
-        <h1 class="titulo"></h1>
-        <ul class="navbar">
-          <li>
-            <a href="./index.html"> Página Inicial </a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="./login.html">Login</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a class="agora" href="./cadastro.html">Cadastre-se</a>
-          </li>
-        </ul>
+          <div class="titulo-img">
+              <h1><a href="index.html">OneWill</a></h1>
+
+          </div>
+          <div class="navegacao">
+              <ul>
+                  <li><a href="index.html">Página Inicial</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li class="agora"><a href="cadastro.html">Cadastre-se</a></li>
+              </ul>
+          </div>
       </div>
-    </div>
-    <!--header fim-->
+  </header>
 
     <div class="banner_cadastro">
       <div class="alerta_erro">
@@ -46,9 +40,9 @@
           <span id="mensagem_erro"></span>
         </div>
       </div>
-      <div class="container tamanho-conteudo">
-        <div class="card medio">
-          <h2>Bem-vindo Mugiwara!</h2>
+      <div class="container_Cadastro">
+        <div class="card">
+          <h2>Junte-se aos Mugiwara!</h2>
           <div class="formulario">
             <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
@@ -86,15 +80,13 @@
       </div>
     </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-      <div class="container">
-        <img class="img_logo_" src="./assets/icon/One-Piece-Logo.png" height="10px"
-        <p>OneWill&copy;</p>
+    <footer>
+      <div class="containerFooter">
+          <img src="./assets/icon/One-Piece-Logo.png" height="100px"
+          <p>OneWill&copy;</p>
       </div>
-    </div>
-    <!--footer fim-->
-  </body>
+  </footer>
+</body>
 </html>
 
 <script>
