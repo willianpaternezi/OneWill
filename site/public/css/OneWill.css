@@ -15,6 +15,7 @@ body {
     flex-direction: column;
 }
 
+
 /* COMEÇO DO HEADER ---------------*/
 .bg_video{
     position: fixed; 
@@ -186,6 +187,8 @@ footer {
     padding: 0px;
     width: 100%;
     background-color: #FFCF1F;
+  border-top: 2px solid rgba(26, 13, 1, 0.968);
+
   }
   
   footer .containerFooter {

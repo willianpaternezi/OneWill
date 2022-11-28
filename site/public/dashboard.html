@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>OneWill | Dicas, comentários e tudo sobre os Chapéu de Palha</title>
 
-    <link rel="icon" href="../assets/icon/logo aus.png">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dashboards.css">
     <script src="../js/funcoes.js"></script>
 
+    <link rel="icon" href="./assets/icon/One-Piece-Logo.png" />
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -60,7 +60,7 @@
                         <a class="agora" href="#sydney">Sydney</a>
                     </li>
                     <li>|</li>
-                    <li >
+                    <li>
                         <a class="agora" href="#brisbane">Brisbane</a>
                     </li>
                     <li>|</li>
@@ -70,42 +70,42 @@
                 </ul>
             </div>
             <div id="sydney" class="sydney">
-                    <img src="../assets/imgs/bondi_cogee.jpeg">
-                    <img src="../assets/imgs/circular_quay.jpg">
-                    <img src="../assets/imgs/palm beach.jpg">
-                    <img src="../assets/imgs/taronga_zoo.jpg">
+                <img src="../assets/imgs/bondi_cogee.jpeg">
+                <img src="../assets/imgs/circular_quay.jpg">
+                <img src="../assets/imgs/palm beach.jpg">
+                <img src="../assets/imgs/taronga_zoo.jpg">
             </div>
             <div id="brisbane" class="brisbane">
-                    <img src="../assets/imgs/koala hospital 2.jpg">
-                    <img src="../assets/imgs/PelicanP-SM-WRC189-777x437.jpg">
-                    <img src="../assets/imgs/surfer paradise.jpg">
-                    <img src="../assets/imgs/lighthouse byron bay.jpg">
+                <img src="../assets/imgs/koala hospital 2.jpg">
+                <img src="../assets/imgs/PelicanP-SM-WRC189-777x437.jpg">
+                <img src="../assets/imgs/surfer paradise.jpg">
+                <img src="../assets/imgs/lighthouse byron bay.jpg">
             </div>
             <div id="canberra" class="canberra">
-                    <img src="../assets/imgs/canberra.jpg">
-                    <img src="../assets/imgs/hyamas beach.jpg">
-                    <img src="../assets/imgs/nan-tien-temple-pilgrim.jpg">
-                    <img src="../assets/imgs/parlamento.jpg">
+                <img src="../assets/imgs/canberra.jpg">
+                <img src="../assets/imgs/hyamas beach.jpg">
+                <img src="../assets/imgs/nan-tien-temple-pilgrim.jpg">
+                <img src="../assets/imgs/parlamento.jpg">
             </div>
         </div>
 
         <div class="dash_votacao">
             <div id="div_capital" class="grafico_capital">
-              Qual o seu personagem favorito dos Chapéu de Palha? <br />
-              <div class="btn_capital">
-                <button class="classe_btn" onclick="btn_capital()">Luffy</button>                
-                <button class="classe_btn" onclick="btn_capital()">Zoro</button>
-                <button class="classe_btn" onclick="btn_capital()">Sanji</button>
-                <button class="classe_btn" onclick="btn_capital()">Usopp</button>
-                <button class="classe_btn" onclick="btn_capital()">Nami</button>
-                <button class="classe_btn" onclick="btn_capital()">Chopper</button>
-                <button class="classe_btn" onclick="btn_capital()">Robin</button>
-                <button class="classe_btn" onclick="btn_capital()">Franky</button>
-                <button class="classe_btn" onclick="btn_capital()">Brook</button>
-    
+                Qual o seu personagem favorito dos Chapéu de Palha? <br />
+                <div class="btn_capital">
+                    <button class="classe_btn" onclick="btn_capital()">Luffy</button>
+                    <button class="classe_btn" onclick="btn_capital()">Zoro</button>
+                    <button class="classe_btn" onclick="btn_capital()">Sanji</button>
+                    <button class="classe_btn" onclick="btn_capital()">Usopp</button>
+                    <button class="classe_btn" onclick="btn_capital()">Nami</button>
+                    <button class="classe_btn" onclick="btn_capital()">Chopper</button>
+                    <button class="classe_btn" onclick="btn_capital()">Robin</button>
+                    <button class="classe_btn" onclick="btn_capital()">Franky</button>
+                    <button class="classe_btn" onclick="btn_capital()">Brook</button>
+
+                </div>
             </div>
-              </div>
-            </div>
+        </div>
 
         <div class="dash-right">
 
@@ -143,19 +143,19 @@
 </html>
 
 <script>
-    
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     var votacao_capital = localStorage.getItem('@voto_capital')
-  var votacao_rota = localStorage.getItem('@voto_rota')
+    var votacao_rota = localStorage.getItem('@voto_rota')
 
-  if(votacao_capital === 'true'){
-    div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>" 
-  }
+    if (votacao_capital === 'true') {
+        div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>"
+    }
 
-  function btn_capital(){
-    div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>" 
-    localStorage.setItem('@voto_capital','true')
+    function btn_capital() {
+        div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>"
+        localStorage.setItem('@voto_capital', 'true')
     }
 
     function limparFormulario() {
@@ -181,7 +181,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.location = "/dashboard/comentarios.html";
+                window.location = "/dashboard.html";
                 limparFormulario();
                 finalizarAguardar();
             } else if (resposta.status == 404) {
@@ -202,7 +202,7 @@
         sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
         console.log("cliquei em editar - " + idAviso);
         window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
-        window.location = "/dashboard/edicao-aviso.html"
+        window.location = "/dashboard.html"
 
     }
 
@@ -217,7 +217,7 @@
 
             if (resposta.ok) {
                 window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/comentarios.html"
+                window.location = "dashboard.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {

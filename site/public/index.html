@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,13 @@
     <link rel="icon" href="./assets/icon/One-Piece-Logo.png" />
     <link rel="stylesheet" href="./css/OneWill.css">
 </head>
+
 <body>
-    <video autoplay muted loop id="myVideo" class="bg_video">
-        <source src="./assets/imgs/video_preview.webm" type="video/mp4">
-      </video>
+    <div class="video_op">
+        <video autoplay muted loop id="myVideo" class="bg_video">
+            <source src="./assets/imgs/video_preview.webm" type="video/mp4">
+        </video>
+    </div>
     <header>
         <div class="container">
             <div class="titulo-img">
@@ -30,13 +34,15 @@
     <main>
         <div class="banner">
             <div class="text-bem-vindo">
-                    <h2>Ahoy! <br>Seja bem vindo Nakama!</h2>
+                <h2>Ahoy! <br>Seja bem vindo Nakama!</h2>
                 <div class="main-text">
                     <video class="video.op" width="500" height="350" controls="controls" autoplay="autoplay">
-                            <source src="./assets/imgs/X2Download.app-One Piece Opening 1 We Are! Legendado (PT-BR).mp4" type="video/mp4">
-                            <object data="" width="320" height="240">
-                                <embed width="320" height="240" src="./assets/imgs/imgsOnLux/X2Download.app-One Piece Opening 1 HD 720p   Special Edition We Are!.mp4">
-                            </object>
+                        <source src="./assets/imgs/X2Download.app-One Piece Opening 1 We Are! Legendado (PT-BR).mp4"
+                            type="video/mp4">
+                        <object data="" width="320" height="240">
+                            <embed width="320" height="240"
+                                src="./assets/imgs/imgsOnLux/X2Download.app-One Piece Opening 1 HD 720p   Special Edition We Are!.mp4">
+                        </object>
                     </video>
                 </div>
             </div>
@@ -48,39 +54,45 @@
                 <h2>Valores</h2>
             </div>
 
-        <div>
-            <div class="valores-text">
-                <div>
-                    <div>Inovação</div>
-                    <img src="./assets/imgs/Inovação_OP.png"  style="height: 200px;">
+            <div>
+                <div class="valores-text">
+                    <div>
+                        <div>Inovação</div>
+                        <img src="./assets/imgs/Inovação_OP.png" style="height: 200px;">
+                    </div>
+                    <div>
+                        <div>Integridade</div>
+                        <img src="./assets/imgs/Integridade.jpg" style="height: 200px;">
+                    </div>
+                    <div>
+                        <div>Qualidade</div>
+                        <img src="./assets/imgs/Qualidade.jpg" style="height: 200px; ">
+                    </div>
                 </div>
-                <div>
-                    <div>Integridade</div>
-                    <img src="./assets/imgs/Integridade.jpg" style="height: 200px;">
-                </div>
-                <div>
-                    <div>Qualidade</div>
-                    <img src="./assets/imgs/Qualidade.jpg"  style="height: 200px; ">
-                </div>
-            </div>               
-       
-            <div class="text-SobreNos">
+
+                <div class="text-SobreNos">
                     <h2>Quem são os Mugiwara(Chapéu de Palha)?</h2>
-            </div>
-            <div class="banner_tripulacao">
-                <div class="sobre-text">
-                    <p>Os chapéus de palha são um grupo de piratas liderados pelo seu Comandante Monkey D. Luffy  que busca ser o rei dos piratas.<br><br> Junto dele estão Roronoa Zoro(Espadachim) o seu braço direito e Vinsmoke Sanji(Cozinheiro) o seu braço esquerdo.<br><br>Em seguida Nami a sua (Navegadora) e Usopp o seu (Atirador).<br><br>Logo depois Tony Tony Chopper(Médico) e Nico Robin .<br><br>Alguns arcos depois ainda temos a introdução de Franky(Carpinteiro/Construtor) e Brook(Músico).<br><br> E juntos eles buscam realizar os seus sonhos juntos e viver grandes aventuras atrás do One Piece!</p>
+                </div>
+                <div class="banner_tripulacao">
+                    <div class="sobre-text">
+                        <p>Os chapéus de palha são um grupo de piratas liderados pelo seu Comandante Monkey D. Luffy que
+                            busca ser o rei dos piratas.<br><br> Junto dele estão Roronoa Zoro(Espadachim) o seu braço
+                            direito e Vinsmoke Sanji(Cozinheiro) o seu braço esquerdo.<br><br>Em seguida Nami a sua
+                            (Navegadora) e Usopp o seu (Atirador).<br><br>Logo depois Tony Tony Chopper(Médico) e Nico
+                            Robin .<br><br>Alguns arcos depois ainda temos a introdução de
+                            Franky(Carpinteiro/Construtor) e Brook(Músico).<br><br> E juntos eles buscam realizar os
+                            seus sonhos e viver grandes aventuras atrás do <br>One Piece!</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
     <footer>
         <div class="containerFooter">
-            <img src="./assets/icon/One-Piece-Logo.png" height="100px"
-            <p>OneWill&copy;</p>
+            <img src="./assets/icon/One-Piece-Logo.png" height="100px" <p>OneWill&copy;</p>
         </div>
     </footer>
 </body>
+
 </html>
 
 <!-- 
@@ -104,35 +116,35 @@
  -->
 
 <script>
-    function Quiz(){
-       var lista_quiz = []
+    function Quiz() {
+        var lista_quiz = []
         lista_quiz
 
-        if(onclick = true){
+        if (onclick = true) {
             innerHtml = display("block")
             var result1 = oqueEleClicou(1)
             lista_quiz.push(result1)
         }
         lista_quiz = [1]
-    
-        if(lista_quiz == [1,1,1,1]){
+
+        if (lista_quiz == [1, 1, 1, 1]) {
             div.innerHtml()
         }
-    
-    
-    
-    resultaFinal1Luffy = [1,2,3,4]
 
-    
-    resultaFinal1Luffy = [1,2,3,4]
-    
-    resultaFinal1Luffy = [1,2,3,4]
-    
-    resultaFinal1Luffy = [1,2,3,4]
-    
-    resultaFinal1Luffy = [1,2,3,4]
-    
-    resultaFinal1Luffy = [1,2,3,4]
+
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
     }
 
 </script>

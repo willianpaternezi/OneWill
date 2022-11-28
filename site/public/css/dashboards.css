@@ -115,6 +115,48 @@
   margin-left: 30px;
 }
 
+
+/* BANNER-Carrossel */
+
+.carrossel{
+  height: 100%;
+  width: 80vw;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+ justify-content: space-between;
+
+}
+
+.container_carrossel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+  width: 100%;
+}
+
+.manocchioDeus{
+  display: flex;
+  height: 80vh;
+  
+}
+
+.container img{
+  height: 100%;
+  width: 80vw;
+}
+
+.container_maps{
+  right: 0;
+}
+
+
 /* pagina graficos */
 
 .dash_votacao {

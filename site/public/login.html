@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,71 +11,74 @@
     <script src="./js/funcoes.js"></script>
 
     <link rel="icon" href="./assets/icon/One-Piece-Logo.png" />
-    <link rel="stylesheet" href="./css/login_cadastro.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"/>
+        rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="titulo-img">
-                <h1><a href="index.html">OneWill</a></h1>
-  
-            </div>
-            <div class="navegacao">
-                <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
-                    <li class="agora"><a href="login.html">Login</a></li>
-                    <li><a href="cadastro.html">Cadastre-se</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-
-    <div class="banner_login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="containerLogin">
-            <div class="card">
-                <h2>Bem vindo Mugiwara!</h2>
-                <div class="formulario">
-
-
-                    <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="Login">
-
-                    <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
-
-                    <button class="btn" onclick="entrar()">Entrar</button>
-
+    <div class="background_holder">
+        <div class="background_img"></div>
+        <header>
+            <div class="container">
+                <div class="titulo-img">
+                    <h1><a href="index.html">OneWill</a></h1>
 
                 </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                <div class="navegacao">
+                    <ul>
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li class="agora"><a href="login.html">Login</a></li>
+                        <li><a href="cadastro.html">Cadastre-se</a></li>
+                    </ul>
                 </div>
+            </div>
+        </header>
 
-                <div id="div_erros_login">
+        <div class="banner_login">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div class="containerLogin">
+                <div class="card">
+                    <h2>Bem vindo Mugiwara!</h2>
+                    <div class="formulario">
 
+
+                        <span class="tipo_campo">E-mail:</span>
+                        <input id="email_input" type="text" placeholder="Login">
+
+                        <span class="tipo_campo">Senha:</span>
+                        <input id="senha_input" type="password" placeholder="******">
+
+                        <button class="btn" onclick="entrar()">Entrar</button>
+
+
+                    </div>
+
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
+
+                    <div id="div_erros_login">
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <footer>
         <div class="containerFooter">
-            <img src="./assets/icon/One-Piece-Logo.png" height="100px"
-            <p>OneWill&copy;</p>
+            <img src="./assets/icon/One-Piece-Logo.png" height="100px" <p>OneWill&copy;</p>
         </div>
     </footer>
 </body>
+
 </html>
 
 <script>
@@ -123,7 +127,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/comentarios.html";
+                        window.location = "dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
