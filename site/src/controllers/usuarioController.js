@@ -74,7 +74,7 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    }else if (confirmacao_senha == undefined) {
+    }else if (confirmacaoSenha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else {
         
