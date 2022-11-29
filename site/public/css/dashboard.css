@@ -194,13 +194,14 @@ h1 a{
 
 .dash-right {
   display: flex;
-  width: 80%;
-  height: fit-content;
-  background-color: #242729;
+  width: 90%;
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.842);
   top: 0;
   align-items: center;
   justify-content: center;
-
+  margin: 50px;
+  flex-direction: column;
 }
 
 .dash-right .avisos {
@@ -221,6 +222,7 @@ h1 a{
 
 .dash-right .avisos .container .div-form #form_postagem {
   width: 100%;
+  padding: 20px;
 }
 
 .dash-right .avisos .div-form label {
@@ -234,7 +236,7 @@ h1 a{
 
 .dash-right .avisos .div-form textarea {
   width: 51vw;
-  border: 1px solid #183052;
+  border: 1px solid #FFCF1F;
   background-color: white;
   border-radius: 5px;
 }
@@ -247,8 +249,8 @@ h1 a{
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #00843D;
+  color: rgba(0, 0, 0, 0.842);
+  background-color: #FFCF1F;
   width: 120px;
 }
 
@@ -259,9 +261,9 @@ h1 a{
   border-radius: 5px;
   font-weight: 600;
   font-size: 14px;
-  padding: 5px 8px;
-  color: white;
-  background-color: #00843D;
+  padding: 10px 15px;
+  color: rgba(0, 0, 0, 0.842);
+  background-color: #FFCF1F;
   width: 80px;
 }
 
@@ -272,7 +274,7 @@ h1 a{
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #00843D;
+  border-bottom: 3px solid #FFCF1F;
   padding: 20px;
 }
 
@@ -284,7 +286,8 @@ h1 a{
   width: 100%;
   height: 330px;
   margin-bottom: 10px;
-  overflow-y: scroll;  
+  overflow-y: scroll;
+  background-color: #242729;  
 }
 
 .div-results::-webkit-scrollbar{
@@ -296,9 +299,9 @@ h1 a{
 }
 
 .div-results::-webkit-scrollbar-thumb{
-  background-color: #00843D;
+  background-color: #FFCF1F;
   border-radius: 20px;
-  border: 3px solid #00843D;
+  border: 3px solid #FFCF1F;
 }
 
 .div-results .feed-container {

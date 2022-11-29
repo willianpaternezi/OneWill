@@ -11,7 +11,8 @@ function listar() {
             u.id AS idUsuario,
             u.nome,
             u.email,
-            u.senha
+            u.senha,
+            u.confirmacaoSenha
         FROM aviso a
             INNER JOIN usuario u
                 ON a.fk_usuario = u.id;
@@ -31,7 +32,8 @@ function pesquisarDescricao(texto) {
             u.id AS idUsuario,
             u.nome,
             u.email,
-            u.senha
+            u.senha,
+            u.confirmacaoSenha
         FROM aviso a
             INNER JOIN usuario u
                 ON a.fk_usuario = u.id
@@ -52,7 +54,8 @@ function listarPorUsuario(idUsuario) {
             u.id AS idUsuario,
             u.nome,
             u.email,
-            u.senha
+            u.senha,
+            u.confirmacaoSenha
         FROM aviso a
             INNER JOIN usuario u
                 ON a.fk_usuario = u.id
@@ -88,6 +91,15 @@ function deletar(idAviso) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+function votar(voto_luffy, voto_zoro, voto_sanji, voto_nami, voto_usopp, voto_chopper, voto_robin, voto_franky, voto_brook, idUsuario) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", voto_luffy, voto_zoro, voto_sanji, voto_nami, voto_usopp, voto_chopper, voto_robin, voto_franky, voto_brook, idUsuario);
+    var instrucao = `
+    INSERT INTO aviso (voto_luffy, voto_zoro, voto_sanji, voto_nami, voto_usopp, voto_chopper, voto_robin, voto_franky, voto_brook, fk_usuario) VALUES ('${voto_luffy}', '${voto_zoro}', '${voto_sanji}', '${voto_nami}', '${voto_usopp}', '${voto_chopper}', '${voto_robin}', '${voto_franky}', '${voto_brook}', ${idUsuario});
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
 module.exports = {
     listar,
@@ -95,5 +107,6 @@ module.exports = {
     pesquisarDescricao,
     publicar,
     editar,
-    deletar
+    deletar,
+    votar
 }

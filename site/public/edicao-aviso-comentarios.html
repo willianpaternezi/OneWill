@@ -17,7 +17,7 @@
     rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+<body onload="validarSessao(), listarInfosDeUm()" style="background-color: #161618;">
     <div class="video_op">
         <video autoplay muted loop id="myVideo" class="bg_video">
             <source src="./assets/imgs/video_luffy.webm" type="video/mp4">
@@ -153,157 +153,66 @@
             </div>
         </div>
 
-         <div class="dash-right">
+        <div class="dash-right">
 
-            <div id="comentarios" class="avisos">
-                <div class="container_feed">
-                    <h1>Compartilhe conosco algo sobre o seu personagem favorito(a):</h1>
+            <div class="avisos">
+                <div class="container_aviso">
+                    <h1>Editar um aviso</h1>
                     <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Persoangem escolhido(a):
-                                <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
+                        <label>
+                            ID:
                             <br>
-                            <label>
-                                O que te fez optar por esse personagem? (máximo de 250 caracteres):
-                                <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
+                            <input id="input_id" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
+                        </label>
+                        <label>
+                            Autor:
                             <br>
-                            <button>Enviar</button>
-                        </form>
+                            <input id="input_nome" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
+                                disabled>
+                        </label>
+                        <label>
+                            Título:
+                            <br>
+                            <input id="input_titulo" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
+                                disabled>
+                        </label>
+                        <br>
+                        <label>
+                            Descrição (máximo de 250 caracteres):
+                            <br>
+                            <textarea id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>
+                        <br>
+                        <button onclick="editar()">Editar</button>
                     </div>
-                    <h1>Comentários da galera:</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
-                        </div>
-                    </div>
+
                 </div>
             </div>
-
-            
-
-        </div> 
-    
-    <script src="./js/funcoes.js"></script>
+        </div>
+    </div>
 </body>
 
 </html>
 
 <script>
-
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-    var votacao_personagem_favorito = localStorage.getItem('@votacao_personagem_favorito')
-
-
-    /* funções votacao */
-
-    function Quiz() {
-        var lista_quiz = []
-        lista_quiz
-
-        if (onclick = true) {
-            innerHtml = display("block")
-            var result1 = oqueEleClicou(1)
-            lista_quiz.push(result1)
-        }
-        lista_quiz = [1]
-
-        if (lista_quiz == [1, 1, 1, 1]) {
-            div.innerHtml()
-        }
-
-        
-        
-        resultaFinal1Luffy = [1, 2, 3, 4]
-
-
-        resultaFinal1Luffy = [1, 2, 3, 4]
-
-        resultaFinal1Luffy = [1, 2, 3, 4]
-
-        resultaFinal1Luffy = [1, 2, 3, 4]
-
-        resultaFinal1Luffy = [1, 2, 3, 4]
-
-        resultaFinal1Luffy = [1, 2, 3, 4]
+    function listarInfosDeUm() {
+        console.log("Criar função de trazer informações de post escolhido");
     }
 
-
-    if (votacao_personagem_favorito === 'true') {
-        div_capital.innerHTML = "<div style='font-size: 72px ;color: #FFCF1F;' >Obrigado pelo seu voto! </div>"
-    }
-
-    function btn_capital() {
-        div_capital.innerHTML = "<div style='font-size: 72px ;color: #FFCF1F;' >Obrigado pelo seu voto!</div>"
-        localStorage.setItem('@votacao_personagem_favorito', 'true')
-    }
-
-
-    /* funções comentarios */
-    function limparFormulario() {
-        document.getElementById("form_postagem").reset();
-    }
-
-    function publicar() {
-        var idUsuario = sessionStorage.ID_USUARIO;
-
-        var corpo = {
-            titulo: form_postagem.titulo.value,
-            descricao: form_postagem.descricao.value
-        }
-
-        fetch(`/avisos/publicar/${idUsuario}`, {
-            method: "post",
+    function editar() {
+        fetch(`/avisos/editar/${sessionStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(corpo)
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                window.location = "/dashboard.html";
-                limparFormulario();
-                finalizarAguardar();
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
-
-    }
-
-    function editar(idAviso) {
-        sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
-        console.log("cliquei em editar - " + idAviso);
-        window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
-        window.location = "/dashboard.html"
-
-    }
-
-    function deletar(idAviso) {
-        console.log("Criar função de apagar post escolhido - ID" + idAviso);
-        fetch(`/avisos/deletar/${idAviso}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
+            body: JSON.stringify({
+                descricao: textarea_descricao.value
+            })
         }).then(function (resposta) {
 
             if (resposta.ok) {
-                window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "dashboard.html"
+                window.alert("Post atualizado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
+                window.location = "/dashboard/comentarios.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -312,96 +221,6 @@
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-    }
-
-    function atualizarFeed() {
-        //aguardar();
-        fetch("/avisos/listar").then(function (resposta) {
-            if (resposta.ok) {
-                if (resposta.status == 204) {
-                    var feed = document.getElementById("feed_container");
-                    var mensagem = document.createElement("span");
-                    mensagem.innerHTML = "Nenhum resultado encontrado."
-                    feed.appendChild(mensagem);
-                    throw "Nenhum resultado encontrado!!";
-                }
-
-                resposta.json().then(function (resposta) {
-                    console.log("Dados recebidos: ", JSON.stringify(resposta));
-
-                    var feed = document.getElementById("feed_container");
-                    feed.innerHTML = "";
-                    for (let i = 0; i < resposta.length; i++) {
-                        var publicacao = resposta[i];
-
-                        // criando e manipulando elementos do HTML via JavaScript
-                        var divPublicacao = document.createElement("div");
-                        var spanID = document.createElement("span");
-                        var spanTitulo = document.createElement("span");
-                        var spanNome = document.createElement("span");
-                        var divDescricao = document.createElement("div");
-                        var divButtons = document.createElement("div");
-                        var btnEditar = document.createElement("button");
-                        var btnDeletar = document.createElement("button");
-
-
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
-                        spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
-                        divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                        btnEditar.innerHTML = "Editar";
-                        btnDeletar.innerHTML = "Deletar";
-
-                        divPublicacao.className = "publicacao";
-                        spanTitulo.id = "inputNumero" + publicacao.idAviso;
-                        spanNome.className = "publicacao-nome";
-                        spanTitulo.className = "publicacao-titulo";
-                        divDescricao.className = "publicacao-descricao";
-
-                        divButtons.className = "div-buttons"
-
-                        btnEditar.className = "publicacao-btn-editar"
-                        btnEditar.id = "btnEditar" + publicacao.idAviso;
-                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
-
-                        btnDeletar.className = "publicacao-btn-editar"
-                        btnDeletar.id = "btnDeletar" + publicacao.idAviso;
-                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
-
-                        divPublicacao.appendChild(spanID);
-                        divPublicacao.appendChild(spanNome);
-                        divPublicacao.appendChild(spanTitulo);
-                        divPublicacao.appendChild(divDescricao);
-                        divPublicacao.appendChild(divButtons);
-                        divButtons.appendChild(btnEditar);
-                        divButtons.appendChild(btnDeletar);
-                        feed.appendChild(divPublicacao);
-                    }
-
-                    finalizarAguardar();
-                });
-            } else {
-                throw ('Houve um erro na API!');
-            }
-        }).catch(function (resposta) {
-            console.error(resposta);
-            finalizarAguardar();
-        });
-    }
-
-    function testar() {
-        aguardar();
-
-        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
-
-        var divResultado = document.getElementById("div_feed");
-
-        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
-        divResultado.innerHTML = formulario.get("descricao");
-
-        finalizarAguardar();
-
-        return false;
     }
 
 </script>
