@@ -8,91 +8,137 @@
     
     <title>OneWill | Dicas, comentários e tudo sobre os Chapéu de Palha</title>
 
-    <script src="../js/funcoes.js"></script>
-
+    
     <link rel="icon" href="./assets/icon/One-Piece-Logo.png" />
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+    <div class="video_op">
+        <video autoplay muted loop id="myVideo" class="bg_video">
+            <source src="./assets/imgs/video_luffy.webm" type="video/mp4">
+        </video>
+    </div>
+    <header>
+        <div class="container">
+            <div class="titulo-img">
+                <h1><a href="dashboard.html">OneWill</a></h1>
 
-    <div class="janela">
-
-
-        <div class="header-left">
-
-            <h1>YouWill</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
+            <div class="navegacao">
+                <ul>
+                    <li class="agora"><a href="#persongens">Personagens</a></li>
+                    <li><a href="#div_capital">Votação</a></li>
+                    <li><a href="#comentários">Comentarios</a></li>
+                    <li><a onclick="limparSessao()">Sair</a></li>
 
-            <div class="btn-nav-white">
-                <a href="personagens.html">
-                    <h3>personagens</h3>
-                </a>
+                </ul>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./votacao.html">
-                    <h3>Votação</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <h3>Dicas e Comentários</h3>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
         </div>
-
-        <div class="dash">
-            <div>
+    </header>
+    
+    <div id="persongens" >
+        <div class="dash_personagens">
                 <ul class="navbar_personagens">
                     <li>
-                        <a class="agora" href="#sydney">Sydney</a>
+                        <a class="agora" href="#img_luffy">Luffy</a>
                     </li>
                     <li>|</li>
                     <li>
-                        <a class="agora" href="#brisbane">Brisbane</a>
+                        <a class="agora" href="#img_zoro">Zoro</a>
                     </li>
                     <li>|</li>
                     <li>
-                        <a class="agora" href="#canberra">Canberra</a>
+                        <a class="agora" href="#img_sanji">Sanji</a>
+                    </li>
+                    <li>
+                        <a class="agora" href="#img_nami">Nami</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a class="agora" href="#img_usopp">Usopp</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a class="agora" href="#img_tony_tony_chopper">Tony Tony Chopper</a>
+                    </li>
+                    <li>
+                        <a class="agora" href="#img_nico_robin">Nico Robin</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a class="agora" href="#img_franky">Franky</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a class="agora" href="#img_brook">Brook</a>
                     </li>
                 </ul>
             </div>
-            <div id="sydney" class="sydney">
-                <img src="../assets/imgs/bondi_cogee.jpeg">
-                <img src="../assets/imgs/circular_quay.jpg">
-                <img src="../assets/imgs/palm beach.jpg">
-                <img src="../assets/imgs/taronga_zoo.jpg">
+            <div class="carrossel_Deus_M">
+                <img id="img_luffy" src="./assets/imgs/Luffy_A.jpg">
+                <div>
+                    Monkey D. Luffy , também conhecido como "Chapéu de Palha Luffy"é o principal protagonista do mangá e anime , One Piece . Ele é o fundador e capitão dos cada vez mais infames e poderosos Piratas do Chapéu de Palha , bem como um de seus melhores lutadores. Ele deseja encontrar o lendário tesouro One Piece e assim se tornar o Rei dos Piratas. Luffy acidentalmente comeu a Gomu Gomu no Mi aos 7 anos, o que transformou seu corpo em borracha.
+                </div>
             </div>
-            <div id="brisbane" class="brisbane">
-                <img src="../assets/imgs/koala hospital 2.jpg">
-                <img src="../assets/imgs/PelicanP-SM-WRC189-777x437.jpg">
-                <img src="../assets/imgs/surfer paradise.jpg">
-                <img src="../assets/imgs/lighthouse byron bay.jpg">
+            <div class="carrossel_Deus_M">
+                <img id="img_zoro" src=".//assets/imgs/Zoro_A.jpg">
+                <div>
+                    Roronoa Zoro, também conhecido como "Caçador de Piratas" Zoro, ele é o segundo membro da tripulação de Luffy e o primeiro a se juntar a ela. Como um mestre do estilo de três espadas, um estilo de esgrima que ele criou durante seu treinamento de infância na Vila Shimotsuki , Zoro está entre os três combatentes mais poderosos dos Chapéus de Palha, ao lado de Luffy e Sanji. Seu sonho é se tornar o maior espadachim do mundo, a fim de honrar uma promessa que fez a seu falecido amigo de infância Kuina .
+                </div>
             </div>
-            <div id="canberra" class="canberra">
-                <img src="../assets/imgs/canberra.jpg">
-                <img src="../assets/imgs/hyamas beach.jpg">
-                <img src="../assets/imgs/nan-tien-temple-pilgrim.jpg">
-                <img src="../assets/imgs/parlamento.jpg">
+            <div class="carrossel_Deus_M">
+                <img id="img_sanji"src=".//assets/imgs/Sanji_A.jpg">
+                <div>
+                    "Perna Preta" Sanji, nascido como Vinsmoke Sanji, é o cozinheiro dos Piratas do Chapéu de Palha e um dos Oficiais Superiores da Grande Frota do Chapéu de Palha. Ele é o quinto membro da tripulação e o quarto a entrar, fazendo isso no final do Arco Baratie .Seu sonho é encontrar o suposto paraíso do chef, All Blue , que é onde East Blue , West Blue , North Blue e South Blue se encontram, junto com sua vida selvagem. Ele é um dos três melhores lutadores dos Chapéus de Palha, ao lado de Luffy e Zoro .
+                </div>
+            </div>
+            <div class="carrossel_Deus_M">
+                <img id="img_nami"src=".//assets/imgs/Nami_A.webp">
+                <div>
+                    "Gatuna" Nami é o navegador dos Piratas do Chapéu de Palha e um dos Oficiais Seniores da Grande Frota do Chapéu de Palha. Ela é o terceiro membro da tripulação e o segundo a entrar.Ela era anteriormente um membro dos Piratas de Arlong e inicialmente se juntou aos Chapéus de Palha para que pudesse roubá-los para comprar de volta sua aldeia de Arlong .Seu sonho é fazer um mapa do mundo inteiro .
+                </div>
+            </div>
+            <div class="carrossel_Deus_M">
+                <img id="img_usopp" src=".//assets/imgs/Usopp_A.jpg">
+                <div>
+                    "Deus" Usopp é o atirador dos Piratas do Chapéu de Palha e um dos Oficiais Superiores da Grande Frota do Chapéu de Palha. Ele é o quarto membro da tripulação e o terceiro a se juntar, fazendo isso no final do Arco Syrup Village . Embora tenha deixado a tripulação durante o Arco Water 7, ele voltou a se juntar no final do Arco Post-Enies Lobby. Usopp sonha em se tornar um bravo guerreiro do mar assim como seu pai e vive todos os dias em busca de realizar esse sonho.
+                </div>
+            </div>
+            <div class="carrossel_Deus_M">
+                <img id="img_tony_tony_chopper" src=".//assets/imgs/Chopper_A.jpg">
+                <div>
+                    Tony Tony Chopper, também conhecido como "Amante de Algodão Doce" Chopper, é o médico dos Piratas do Chapéu de Palha e um dos Oficiais Superiores da Grande Frota do Chapéu de Palha. Ele é o sexto membro da tripulação e o quinto a se juntar, fazendo isso no final do Arco da Ilha de Drum.Chopper é uma rena que comeu a Hito Hito no Mi, uma Akuma no Mi que permite ao seu usuário se transformar em um híbrido humano ou humano à vontade. Ele veio da Ilha Drum e foi ensinado a ser médico por suas duas figuras paternas, os doutores Hiriluk e Kureha. Seu sonho é um dia se tornar um médico capaz de curar qualquer doença e quer viajar o mundo todo justamente na esperança de realizar esse sonho.
+                </div>
+            </div>
+            <div class="carrossel_Deus_M">
+                <img id="img_nico_robin" src=".//assets/imgs/Robin_A.jpg">
+                <div>
+                    Nico Robin, também conhecida por seu epíteto "Criança Demônio" e "Luz da Revolução", é a arqueóloga dos Piratas do Chapéu de Palha e uma das Oficiais Seniores da Grande Frota do Chapéu de Palha. Ela é o sétimo membro da tripulação e o sexto a se juntar, fazendo isso no final do Arco Arabasta . Ela deixou temporariamente a tripulação durante o Arco Water 7 , mas voltou durante o Arco Enies Lobby. Robin comeu a Hana Hana no Mi, dando a ela o poder de reproduzir partes de seu corpo (ou todo o corpo) em qualquer superfície à vontade. Como a única sobrevivente da ilha destruída de West Blue Ohara , ela é atualmente uma das duas únicas pessoas no mundo conhecidas por ter a habilidade de ler e decifrar Poneglyphs , uma habilidade que é considerada proibida e ameaçadora para o Governo Mundial .
+                </div>
+            </div>
+            <div class="carrossel_Deus_M">
+                <img id="img_franky" src=".//assets/imgs/Franky_A.png">
+                <div>
+                    " Homem de Ferro " Franky é o construtor naval dos Piratas do Chapéu de Palha e um dos Oficiais Superiores da Grande Frota do Chapéu de Palha. Ele é o oitavo membro da tripulação e o sétimo a entrar, fazendo isso no final do Arco Post-Enies Lobby. Nascido "Cutty Flam", ele escolheu usar o apelido de "Franky" até eventualmente descartar permanentemente seu nome verdadeiro a pedido de Iceburg para esconder sua identidade. O sonho de Franky é criar um navio e navegar o mundo com ele, ele também construiu o Thousand Sunny segundo navio dos Chapéus de Palha e se juntou a eles para juntos realizar seu sonho.
+                </div>
+            </div>
+            <div class="carrossel_Deus_M">
+                <img id="img_brook" src=".//assets/imgs/Brook_A.jpg">
+                <div>
+                    " Soul King " Brook é o músico dos Piratas do Chapéu de Palha , um de seus dois espadachins e um dos Oficiais Seniores da Grande Frota do Chapéu de Palha. Ele é o nono membro da tripulação e o oitavo a se juntar, fazendo isso no final do Arco Thriller Bark . Brook comeu a Yomi Yomi no Mi, o que lhe permitiu voltar à vida após a morte uma vez. Brook finalmente aprendeu a explorar mais profundamente os poderes de sua Akuma no Mi, dando-lhe um controle significativo sobre sua própria alma e as almas dos outros. Originalmente um membro dos Piratas Rumbar , ele morreu e ressuscitou através do poder da Yomi Yomi no Mi. No entanto, devido ao tempo que sua alma levou para encontrar seu corpo, ela foi reduzida a um esqueleto, mantendo apenas seu cabelo afro intacto. Brook vagou sozinho no Florian Triangle por 50 anos, finalmente encontrando Luffy e servindo como aliado dos Chapéus de Palha.
+                </div>
             </div>
         </div>
 
         <div class="dash_votacao">
-            <div id="div_capital" class="grafico_capital">
+            <div id="div_capital" class="grafico_personagens">
                 Qual o seu personagem favorito dos Chapéu de Palha? <br />
-                <div class="btn_capital">
+                <div class="btn_grafico_p">
                     <button class="classe_btn" onclick="btn_capital()">Luffy</button>
                     <button class="classe_btn" onclick="btn_capital()">Zoro</button>
                     <button class="classe_btn" onclick="btn_capital()">Sanji</button>
@@ -102,14 +148,14 @@
                     <button class="classe_btn" onclick="btn_capital()">Robin</button>
                     <button class="classe_btn" onclick="btn_capital()">Franky</button>
                     <button class="classe_btn" onclick="btn_capital()">Brook</button>
-
+                    
                 </div>
             </div>
         </div>
 
-        <div class="dash-right">
+         <div class="dash-right">
 
-            <div class="avisos">
+            <div id="comentarios" class="avisos">
                 <div class="container_feed">
                     <h1>Compartilhe conosco algo sobre o seu personagem favorito(a):</h1>
                     <div class="div-form">
@@ -136,8 +182,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> 
+    
+    <script src="./js/funcoes.js"></script>
 </body>
 
 </html>
@@ -149,6 +196,41 @@
     var votacao_capital = localStorage.getItem('@voto_capital')
     var votacao_rota = localStorage.getItem('@voto_rota')
 
+
+    /* funções votacao */
+
+    function Quiz() {
+        var lista_quiz = []
+        lista_quiz
+
+        if (onclick = true) {
+            innerHtml = display("block")
+            var result1 = oqueEleClicou(1)
+            lista_quiz.push(result1)
+        }
+        lista_quiz = [1]
+
+        if (lista_quiz == [1, 1, 1, 1]) {
+            div.innerHtml()
+        }
+
+        
+        
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+
+        resultaFinal1Luffy = [1, 2, 3, 4]
+    }
+
+
     if (votacao_capital === 'true') {
         div_capital.innerHTML = "<div style='font-size: 72px ;color: green;' >Obrigado pelo seu voto!<br> Canberra é a capital </div>"
     }
@@ -158,6 +240,8 @@
         localStorage.setItem('@voto_capital', 'true')
     }
 
+
+    /* funções comentarios */
     function limparFormulario() {
         document.getElementById("form_postagem").reset();
     }

@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.842);
+  overflow-x: hidden;
+  
+}
+.bg_video{
+  position: fixed; 
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto; 
+  z-index: -1000;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+header{
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.842);
+  border-bottom: 2px solid  #FFCF1F;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titulo-img {
+  background-image: url("/assets/icon/One-Piece-Logo.png");
+  padding: 10px 35px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+h1 a{
+  opacity: 0;
+  font-size: 40px; 
+}
+
+.titulo-img img{
+  width: 150px;
+}
+
+
+.navegacao a {
+  color: #FFCF1F;
+  text-decoration: none;
+}
+
+.navegacao ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+.navegacao ul li {
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.navegacao ul li:hover{
+  text-shadow: 3px 3px 22px #FFCF1F;
+}
+
+
+
+/* Main */
+.dash_personagens{
+  box-shadow: 2px 2px  #FFCF1F;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.842);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.dash_personagens ul li a{
+  text-decoration: none;
+  color: #FFCF1F;
+}
+
+
+
+/* BANNER-Carrossel */
+.carrossel_Deus_M {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  background-color: rgba(0, 0, 0, 0.842);
+  border-radius: 10px;
+  overflow:hidden;
+  height: auto;
+  
+}
+
+.carrossel_Deus_M img {
+  height: 350px;
+  width: 350px;
+
+}
+
+.carrossel_Deus_M div {
+  width: 67%;
+  margin-left: 50px;
+  color: #FFF;
+  height: 350px;
+  display: flex;
+  align-items: center;  
+  font-size: 22px;
+  text-align: justify;
+
+}
+
+/* pagina graficos */
+
+/* votação */
+
+.dash_votacao {
+  background-color: rgba(0, 0, 0, 0.842);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 50px;
+  height: 350px;
+}
+
+ 
+.navbar_personagens {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+  color: #FFCF1F ;
+}
+
+
+
+.grafico_personagens{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  width: 85%;
+  height: 40%;
+  font-size: 32px;
+  color:  aliceblue;
+}
+
+.btn_grafico_p{
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.classe_btn {
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: rgba(0, 0, 0, 0.842);
+  background-color: #FFCF1F;
+  width: 100px;
+}
+
+
+
+/* comentarios */
+
+.dash-right {
+  display: flex;
+  width: 80%;
+  height: fit-content;
+  background-color: #242729;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dash-right .avisos {
+  width: 70%;
+  color: rgb(216, 216, 216);
+  font-family: "Exo 2", sans-serif;
+}
+
+.dash-right .avisos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-right .avisos .container .div-form {
+  width: 100%;
+}
+
+.dash-right .avisos .container .div-form #form_postagem {
+  width: 100%;
+}
+
+.dash-right .avisos .div-form label {
+  width: 100%;
+}
+
+.dash-right .avisos .div-form input {
+  width: 50vw;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form textarea {
+  width: 51vw;
+  border: 1px solid #183052;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form button {
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #00843D;
+  width: 120px;
+}
+
+.publicacao-btn-editar {
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: white;
+  background-color: #00843D;
+  width: 80px;
+}
+
+.publicacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 3px solid #00843D;
+  padding: 20px;
+}
+
+.publicacao > *:not(:last-child) {
+  padding: 0 0 10px 0;
+}
+
+.div-results {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 10px;
+  overflow-y: scroll;  
+}
+
+.div-results::-webkit-scrollbar{
+  width: 5px;
+}
+
+.div-results::-webkit-scrollbar-track{
+  background-color: #212124;  
+}
+
+.div-results::-webkit-scrollbar-thumb{
+  background-color: #00843D;
+  border-radius: 20px;
+  border: 3px solid #00843D;
+}
+
+.div-results .feed-container {
+  background-color: #212124;
+  border-radius: 5px;
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div-buttons > * {
+  margin-left: 30px;
+}

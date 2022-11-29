@@ -1,99 +1,186 @@
 // sessão
 function validarSessao() {
-    // aguardar();
+  // aguardar();
 
-    var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
+  var email = sessionStorage.EMAIL_USUARIO;
+  var nome = sessionStorage.NOME_USUARIO;
 
-    var b_usuario = document.getElementById("b_usuario");
+  var b_usuario = document.getElementById("b_usuario");
 
-    if (email != null && nome != null) {
-        // window.alert(`Seja bem-vindo, ${nome}!`);
-        b_usuario.innerHTML = nome;
+  if (email != null && nome != null) {
+    // window.alert(`Seja bem-vindo, ${nome}!`);
+    b_usuario.innerHTML = nome;
 
-        // finalizarAguardar();
-    } else {
-        window.location = "../login.html";
-    }
+    // finalizarAguardar();
+  } else {
+    window.location = "../login.html";
+  }
 }
 
 function limparSessao() {
-    // aguardar();
-    sessionStorage.clear();
-    // finalizarAguardar();
-    window.location = "../login.html";
+  // aguardar();
+  sessionStorage.clear();
+  // finalizarAguardar();
+  window.location = "../login.html";
 }
 
 // carregamento (loading)
 function aguardar() {
-    var divAguardar = document.getElementById("div_aguardar");
-    divAguardar.style.display = "flex";
+  var divAguardar = document.getElementById("div_aguardar");
+  divAguardar.style.display = "flex";
 }
 
 function finalizarAguardar(texto) {
-    var divAguardar = document.getElementById("div_aguardar");
-    divAguardar.style.display = "none";
+  var divAguardar = document.getElementById("div_aguardar");
+  divAguardar.style.display = "none";
 
-    var divErrosLogin = document.getElementById("div_erros_login");
-    if (texto) {
-        divErrosLogin.innerHTML = texto;
-    }
+  var divErrosLogin = document.getElementById("div_erros_login");
+  if (texto) {
+    divErrosLogin.innerHTML = texto;
+  }
 }
 
 // modal
 function mostrarModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "flex";
+  var divModal = document.getElementById("div_modal");
+  divModal.style.display = "flex";
 }
 
 function fecharModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "none";
+  var divModal = document.getElementById("div_modal");
+  divModal.style.display = "none";
 }
 
 // carrossel
 
-const imgs_carrossel = [
-    {
-        img: "../assets/imgs/canberra.jpg" , 
-        local: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6513.985649707046!2d149.12919935!3d-35.281304649999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d69b05c9021%3A0x500ea6ea7695660!2sCanberra%20ACT%202601%2C%20Australia!5e0!3m2!1sen!2sbr!4v1654458656450!5m2!1sen!2sbr" 
-    },
-    {
-        img: "../assets/imgs/sydney.png",
-        local: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424143.2713133365!2d150.65178422173113!3d-33.84792702661292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2sbr!4v1653067719740!5m2!1sen!2sbr"
-    },
-    {
-        img: "../assets/imgs/brisbane.png",
-        local: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453477.6536737166!2d152.99319645!3d-27.3821429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2sbr!4v1654458667541!5m2!1sen!2sbr"
-    }
-]
+const imgs_luffy = [
+  {
+    img: ".//assets/imgs/Luffy_Mini.webp",
+  },
+  {
+    img: ".//assets/imgs/Luffy_B.webp",
+  },
+  {
+    img: "./assets/imgs/Luffy_A.jpg",
+  },
+];
 
-let imgs = document.getElementById("imgs");
-imgs = !!imgs === true ?  imgs : document.createElement('div');
-console.log(imgs);
+const imgs_zoro = [
+  {
+    img: ".//assets/imgs/Zoro_Mini.jpg",
+  },
+  {
+    img: ".//assets/imgs/Zoro_B.jpg",
+  },
+  {
+    img: ".//assets/imgs/Zoro_A.jpg",
+  },
+];
 
-for (let i = 0; i < imgs_carrossel.length; i++) {
-    let img_carrossel = document.createElement('img');
-    img_carrossel.src = imgs_carrossel[i].img;
+const imgs_sanji = [
+  {
+    img: ".//assets/imgs/Sanji_Mini.jpg",
+  },
+  {
+    img: ".//assets/imgs/Sanji_B.jpg",
+  },
+  {
+    img: ".//assets/imgs/Sanji_A.jpg",
+  },
+];
 
-    imgs.appendChild(img_carrossel);
+const imgs_nami = [
+  {
+    img: ".//assets/imgs/Nami_Mini.png",
+  },
+  {
+    img: ".//assets/imgs/Nami_B.png",
+  },
+  {
+    img: "./assets/imgs/Nami_A.webp",
+  },
+];
+
+const imgs_usopp = [
+  {
+    img: ".//assets/imgs/Usopp_Mini.jpg",
+  },
+  {
+    img: ".//assets/imgs/Usopp_B.jpg",
+  },
+  {
+    img: ".//assets/imgs/Usopp_A.jpg",
+  },
+];
+
+const imgs_tony_tony_chopper = [
+  {
+    img: ".//assets/imgs/Chopper_Mini.webp",
+  },
+  {
+    img: ".//assets/imgs/Chopper_B.jpg",
+  },
+  {
+    img: ".//assets/imgs/Chopper_A.jpg",
+  },
+];
+
+const imgs_nico_robin = [
+  {
+    img: ".//assets/imgs/Robin_Mini.jpg",
+  },
+  {
+    img: ".//assets/imgs/Robin_B.png",
+  },
+  {
+    img: "./assets/imgs/Robin_A.jpg",
+  },
+];
+
+const imgs_franky = [
+  {
+    img: ".//assets/imgs/Franky_mini.jpg",
+  },
+  {
+    img: ".//assets/imgs/Franky_B.webp",
+  },
+  {
+    img: ".//assets/imgs/Franky_A.png",
+  },
+];
+
+const imgs_brook = [
+  {
+    img: ".//assets/imgs/Brook_Mini.jpg",
+  },
+  {
+    img: ".//assets/imgs/Brook_B.webp",
+  },
+  {
+    img: ".//assets/imgs/Brook_A.jpg",
+  },
+];
+
+let contadores = [0,0,0,0,0,0,0,0,0];
+
+function carrosselPersonagens(imgs_personagens, id, index) {
+  if (contadores[index] > imgs_personagens.length - 1) {
+    contadores[index] = 0;
+  }
+  document.getElementById(id).src = imgs_personagens[contadores[index]].img;
+  contadores[index] = contadores[index]+1
 }
 
-const img = document.querySelectorAll("#imgs img");
-let idx = 0;
+function initCarrossel() {
+  carrosselPersonagens(imgs_luffy, "img_luffy",0)
+  carrosselPersonagens(imgs_zoro, "img_zoro",1)
+  carrosselPersonagens(imgs_sanji, "img_sanji",2)
+  carrosselPersonagens(imgs_nami, "img_nami",3)
+  carrosselPersonagens(imgs_usopp, "img_usopp",4)
+  carrosselPersonagens(imgs_tony_tony_chopper, "img_tony_tony_chopper",5)  
+  carrosselPersonagens(imgs_nico_robin, "img_nico_robin",6)
+  carrosselPersonagens(imgs_franky, "img_franky",7)
+  carrosselPersonagens(imgs_brook, "img_brook",8)
 
-function carrossel(){
-    var iframe = document.getElementById("iframe_carrossel");
-    iframe = iframe ? iframe : document.createElement("iframe");
-    idx++;
-    
-    if(idx > img.length - 1){
-        idx = 0;
-    }
-
-    imgs.style.transform = `translateX(${-idx * 80}vw)`;
-    
-    iframe.src = imgs_carrossel[idx].local ;  
 }
-
-setInterval(carrossel, 5000);
+setInterval( initCarrossel, 3000);

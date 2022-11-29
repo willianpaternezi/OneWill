@@ -8,7 +8,6 @@ html{
 }
 body {
     font-family: 'Ubuntu Mono', monospace;
-    background-image: url('../css/video_preview.webm');
     width: 100%;
     height: 100%;
     display: flex;
@@ -18,16 +17,17 @@ body {
 
 /* COMEÇO DO HEADER ---------------*/
 .bg_video{
-    position: fixed; 
-    right: 0; 
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto; 
-    z-index: -1000;
-    background: url(../css/video_preview.webm) no-repeat;
-    background-size: cover; 
+  position: fixed; 
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto; 
+  z-index: -1000;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 header{
     box-shadow: 2px 2px  #FFCF1F;
