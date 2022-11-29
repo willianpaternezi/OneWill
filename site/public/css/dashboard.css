@@ -142,7 +142,7 @@ h1 a{
   align-items: center;
   border-radius: 10px;
   margin: 50px;
-  height: 350px;
+  height: 400px;
 }
 
  
@@ -170,6 +170,7 @@ h1 a{
   height: 40%;
   font-size: 32px;
   color:  aliceblue;
+  padding-top: 50px;
 }
 
 .btn_grafico_p{
@@ -190,6 +191,10 @@ h1 a{
   background-color: #FFCF1F;
   width: 100px;
 }
+.myChart {
+
+  padding: 70px;
+}
 
 
 
@@ -197,14 +202,14 @@ h1 a{
 
 .dash-right {
   display: flex;
-  width: 90%;
-  height: 1000px;
+  height: 800px;
   background-color: rgba(0, 0, 0, 0.842);
   top: 0;
   align-items: center;
   justify-content: center;
   margin: 50px;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .dash-right .avisos {
@@ -220,6 +225,7 @@ h1 a{
 }
 
 .dash-right .avisos .container .div-form {
+  padding-top: 20px;
   width: 100%;
 }
 
