@@ -104,11 +104,30 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "(Verifique se existe campos em branco)";
 
       finalizarAguardar();
       return false;
-    } else {
+
+    } else if (emailVar == "" || !emailVar.includes("@") || !emailVar.endsWith(".com")) {
+      alert('Por favor, insira um email válido, que contenha "@" e ".com"')
+
+      finalizarAguardar();
+      return false;
+
+    }else if (senhaVar == "" || senhaVar.length <= 7) {
+      alert('Por favor, insira uma senha com no mínimo 8 caracteres!.')
+
+      finalizarAguardar();
+      return false;
+
+    }else if (senhaVar != confirmacaoSenhaVar || confirmacaoSenhaVar == "") {
+      alert('Por favor, repita a senha.')
+
+      finalizarAguardar();
+      return false;
+
+    }else {
       setInterval(sumirMensagem, 5000);
     }
 
